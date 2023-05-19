@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "0dneE+pFTDs/Eim8NMcf8qEFrsjlaShyDOeZUMI3CVBGfQXdcYoosFEkrQBCtyZrYxB3atZfMPbzryxLzo13WA==",
+  "success": true,
+  "projectFilePath": "D:\\FPT_study\\FPT_2023\\SUMMER23\\SWT301\\HOMEWORK_LAB\\SWT_LAB1_DE170303_Copy\\SWT_LAB1_DE170303.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\This PC\\.nuget\\packages\\epplus\\6.2.4\\epplus.6.2.4.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\7.0.0\\microsoft.extensions.configuration.fileextensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.configuration.json\\7.0.0\\microsoft.extensions.configuration.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\7.0.0\\microsoft.extensions.fileproviders.physical.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\7.0.0\\microsoft.extensions.filesystemglobbing.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.io.recyclablememorystream\\2.2.1\\microsoft.io.recyclablememorystream.2.2.1.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.formats.asn1\\7.0.0\\system.formats.asn1.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.0\\system.security.cryptography.pkcs.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.text.encoding.codepages\\7.0.0\\system.text.encoding.codepages.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\This PC\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
