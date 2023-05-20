@@ -23,7 +23,7 @@ public static class Program
         stopwatch.Start();
         await GetResultListAsync(excelItems);
         stopwatch.Stop();
-        System.Console.WriteLine("{0, -20} | {1, -20} | {2}", "a", "b", "c");
+        System.Console.WriteLine("{0, -20} | {1, -20} | {2}", 'a', 'b', 'c');
         foreach (var item in excelItems)
         {
             await Console.Out.WriteLineAsync($"{item.Item1, -20} | {item.Item2, -20} | {item.Result}");
@@ -57,11 +57,12 @@ public static class Program
                 excelDataItem.Result = "Receive Inputs are not Positive Integers";
                 return;
             }
-            for (short i = 0; i < 10_000; i++)
+            const int loopTime = 10_000;
+            for (int i = 0; i < loopTime && c >= 0; i++)
             {
-                for (short j = 0; j < 10_000; j++)
+                for (int j = 0; j < loopTime && c >= 0; j++)
                 {
-                    c = a + b + c;
+                    c = c + a + b;
                 }
             }
             if (c < 0) excelDataItem.Result = "Overflow happened";
