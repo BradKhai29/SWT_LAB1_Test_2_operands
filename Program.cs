@@ -47,29 +47,34 @@ public static class Program
 
     static async Task<string> ResolveDataItemAsync(ExcelDataItem excelDataItem)
     {
-        ExcelDataItem dataItem = new(0, 0);
         StringBuilder stringBuilder = new();
         await Task.Delay(1);
-        for (short i = 0; i < 10_000; i++)
+        try
         {
-            // var currentThread = Environment.CurrentManagedThreadId;
-            // await Console.Out.WriteLineAsync($"Thread = {currentThread}");
-            for (short j = 0; j < 10_000; j++)
+            int c = 0;
+            int a = int.MinValue;
+            int b = int.MinValue;
+            bool testA = int.TryParse(excelDataItem.Item1.ToString(), out a);
+            bool testB = int.TryParse(excelDataItem.Item2.ToString(), out b);
+            if(!(testA && testB) || a < 0 || b < 0) throw new Exception("Receive Inputs are not Positive Integers"); 
+            for (short i = 0; i < 10_000; i++)
             {
-                //DataItem.Item1 = excelDataItem.Item1 + excelDataItem.Item2
-                dataItem.Item1 = excelDataItem.GetResult();
-                //DataItem.Item2 = excelDataItem.Item1 + excelDataItem.Item2 + DataItem.Item1
-                dataItem.Item2 = dataItem.GetResult();
-                if(dataItem.GetResult() is not int) break;
+                for (short j = 0; j < 10_000; j++)
+                {
+                   c = a + b + c;
+                }
             }
-            if(dataItem.GetResult() is not int) break;
+            if(c < 0) throw new OverflowException();
+            excelDataItem.Result = c;
         }
-        var result = dataItem.GetResult();
+        catch (Exception exception)
+        {
+            excelDataItem.Result = exception;
+        }
+
         string resultString;
-
-        if (result is int) resultString = stringBuilder.Append(result).Append(" : [Pass]").ToString();
-        else resultString = stringBuilder.Append("Error : [").Append((result as Exception)!.Message).Append(']').ToString();
-
+        if (excelDataItem.Result is int) resultString = stringBuilder.Append(excelDataItem.Result).Append(" : [Pass]").ToString();
+        else resultString = stringBuilder.Append("Error : [").Append((excelDataItem.Result as Exception)!.Message).Append(']').ToString();
         return $"a = {excelDataItem.Item1,-12}, b = {excelDataItem.Item2,-12}, c = {resultString}";
     }
 }
