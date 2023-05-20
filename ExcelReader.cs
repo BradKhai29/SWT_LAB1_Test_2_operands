@@ -36,6 +36,7 @@ public partial class ExcelReader
             var fileInfo = new FileInfo(fileName: fileName);
             using var excelDocument = new ExcelPackage(fileInfo);
             await excelDocument.LoadAsync(fileInfo);
+            // Working with the First workSheet
             var workSheet1 = excelDocument.Workbook.Worksheets[0];
 
             for (var currentRow = StartRow; currentRow <= EndRow; currentRow++)
@@ -70,13 +71,12 @@ public partial class ExcelReader
         bool inBinDirectory = false;
         foreach (var directory in directoryList)
         {
-            if (directory.Equals("bin")) inBinDirectory = true;
+            if (directory.Equals("bin"))
+            {
+                inBinDirectory = true;
+                break;
+            }
         }
-        if (inBinDirectory)
-        {
-            string newCurrentDirectory = Path.Combine(currentDirectory, "..", "..", "..");
-            Environment.CurrentDirectory = newCurrentDirectory;
-            Console.WriteLine(Environment.CurrentDirectory);
-        }
+        if (inBinDirectory) Environment.CurrentDirectory = Path.Combine(currentDirectory, "..", "..", "..");
     }
 }
